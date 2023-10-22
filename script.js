@@ -3,12 +3,13 @@ let textn=document.getElementById("text");
 let numbert=document.getElementById("delay");
 let button=document.getElementById("btn");
 let divd=document.getElementById("output");
-  if (!textv || isNaN(delay) || delay < 0) {
+ 
+async function displayf(textv,delay) {
+	try{
+		 if (!textv || isNaN(delay) || delay < 0) {
                 divd.textContent = "Please enter valid text and delay.";
                 return;
             }
-async function displayf(textv,delay) {
-	try{
 		await new Promise((resolve)=>{
 			setTimeout(()=>{
 				divd.textContent=textv;
